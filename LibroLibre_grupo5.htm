@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>AE5-Grupal</title>
+</head>
+
+<body>
+    <!-- Cabecera de página   -->
+    <header class="navbar">
+        <div class="logo">LibroLibre</div>
+        <nav class="nav-links">
+            <a href="#buscador">Catálogo</a>
+            <a href="#formulario">Registro</a>
+            <a href="#nosotros">Sobre Nosotros</a>
+        </nav>
+    </header>
+
+    <!-- Sección del buscador -->
+    <main>
+        <section class="buscador" id="buscador">
+            <h2><strong>Catálogo de libros</strong></h2>
+            <input type="text" placeholder="Buscar por título, autor o género" style="width: 300px" id="myInput" />
+            <button onclick="buscarLibro(event)" style="width: 300px">
+                Buscar
+            </button>
+            <div id="numeroCoincidencias" class="numeroCoincidencias" style="width: 300px; height: 2em"></div>
+        </section>
+        <section id="contenedor_libro" class="contenedor_libro">
+            <div class="libro d-flex align-items-center justify-content-between">
+                <div>
+                    <h3><strong>El Principito</strong></h3>
+                    <h5>Autor: Antoine de Saint-Exupéry</h5>
+                    <h6>Género: Ficción</h6>
+                    <p>Una historia poética sobre un pequeño príncipe y sus viajes.</p>
+                </div>
+                <img src="img/principito.jpeg" alt="El Principito"
+                    style="width:140px; height:140px; object-fit:cover; border-radius:8px;">
+            </div>
+
+            <div class="libro d-flex align-items-center justify-content-between">
+                <div>
+                    <h3><strong>Clean Code</strong></h3>
+                    <h5>Autor: Robert C. Martin</h5>
+                    <h6>Género: Programación</h6>
+                    <p>Una guía para escribir código limpio y mantenible.</p>
+                </div>
+                <img src="img/cleancode.jpeg" alt="Clean Code"
+                    style="width:140px; height:140px; object-fit:cover; border-radius:8px;">
+            </div>
+
+            <div class="libro d-flex align-items-center justify-content-between">
+                <div>
+                    <h3><strong>Cien años de soledad</strong></h3>
+                    <h5>Autor: Gabriel García Márquez</h5>
+                    <h6>Género: Ficción</h6>
+                    <p>Una saga familiar ambientada en el mítico pueblo de Macondo.</p>
+                </div>
+                <img src="img/cienAños.jpeg" alt="Cien años de soledad"
+                    style="width:140px; height:140px; object-fit:cover; border-radius:8px;">
+            </div>
+        </section>
+    </main>
+
+    <!-- Sección del formulario -->
+    <section class="formulario" id="formulario">
+        <h3><strong>Registro de usuarios</strong></h3>
+        <br />
+        <form action="">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" required />
+            </div>
+
+            <div class="mb-3">
+                <input type="email" class="form-control" id="correo" placeholder="Correo electronico" required />
+            </div>
+
+            <div class="mb-3">
+                <input type="password" id="contraseña" class="form-control" placeholder="Contraseña" required />
+            </div>
+
+            <div class="mb-3 text-center d-grid gap-2">
+                <button class="btn btn-bg border" id="Boton" type="button" style="background-color: #f0f0f0">
+                    Registrarse
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Sección footer -->
+    <footer id="nosotros">
+        <h2><strong>Sobre nosotros</strong></h2>
+        <p>
+            LibroLibre es una biblioteca digital creada por tres entusiastas de la
+            lectura con el objetivo de facilitar el acceso a libros electrónicos y
+            audiolibros de manera simple y eficiente.
+        </p>
+    </footer>
+</body>
+
+<!-- Script JS -->
+<script src="js/index.js"></script>
+
+</html>
